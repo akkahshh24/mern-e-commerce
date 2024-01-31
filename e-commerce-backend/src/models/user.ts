@@ -7,7 +7,7 @@ interface IUser extends Document {
     email: string,
     gender: "male" | "female" | "others",
     dob: Date,
-    profilePic: string,
+    photo: string,
     role: "admin" | "user",
     createdAt: Date,
     updatedAt: Date,
@@ -39,9 +39,9 @@ const userSchema = new mongoose.Schema(
             type: Date,
             required: [true, "Please enter your date of birth"],
         },
-        profilePic: {
+        photo: {
             type: String,
-            required: [true, "Please enter profile picture link"],
+            required: [true, "Please enter photo link"],
         },
         role: {
             type: String,
